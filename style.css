@@ -1,28 +1,86 @@
-.content h1{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 80px;
+body {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.content p{
-    font-size: 35px !important;
-    font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+.content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem !important;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem;
+    transition: transform 0.3s ease;
 }
 
-#quote{
-    font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 400 !important;
+.content:hover {
+    transform: translateY(-5px);
 }
 
+.content h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3.5rem;
+    color: #1e3c72;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-.content button{
+.content p {
+    font-size: 1.5rem !important;
+    font-family: 'Georgia', serif;
+    color: #444;
+    line-height: 1.6;
+}
+
+#quote {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #2a5298;
+    padding: 2rem;
+    border-left: 5px solid #1e3c72;
+    background: rgba(42, 82, 152, 0.1);
+    border-radius: 0 15px 15px 0;
+    margin: 2rem 0;
+    transition: all 0.3s ease;
+}
+
+#quote span {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: normal;
+}
+
+.content button {
     width: 250px;
-    height: 80px;
-    background-color: blue;
+    height: 60px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: white;
-    font-size: 14px;
-    cursor: unset;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.content button:hover{
-    background-color: green;
+.content button:hover {
+    background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#quote {
+    animation: fadeIn 0.5s ease-out;
 }
